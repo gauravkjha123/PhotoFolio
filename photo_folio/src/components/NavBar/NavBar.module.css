@@ -1,0 +1,15 @@
+
+.header{
+    background-color:#07f;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 50px;
+}
+
+.header img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
