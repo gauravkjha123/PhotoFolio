@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import AlbumFormCss from "./AlbumForm.module.css";
 
-const AlbumForm = ({ addAlbum }) => {
+const AlbumForm = ({ addAlbum ,setShowFormFn }) => {
   const nameRef = useRef(null);
 
   const submitHandler = (e) => {
@@ -14,6 +14,7 @@ const AlbumForm = ({ addAlbum }) => {
     };
     addAlbum(data);
     clearInput();
+    setShowFormFn()
   };
 
   const clearInput = (e) => {

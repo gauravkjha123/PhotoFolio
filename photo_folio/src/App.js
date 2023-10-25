@@ -1,9 +1,9 @@
-import AlbumsList from "./components/AlbumsList/AlbumsList"
+import AlbumsList from "./components/AlbumsList/AlbumsList";
 
 function App() {
   return (
     <>
-  <AlbumsList/>
+      <AlbumsList></AlbumsList>
     </>
   );
 }

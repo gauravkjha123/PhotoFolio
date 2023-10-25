@@ -19,7 +19,7 @@ const reducer = (state, action) => {
   };
 
 
-const AlbumsList = () => {
+const AlbumsList = (props) => {
   const [albums, dispatch] = useReducer(reducer, []);
   const [showForm, setShowForm] = useState(false);
   const [selectedAlbum, setselectedAlbum] = useState("");
@@ -36,7 +36,6 @@ const AlbumsList = () => {
     const docRef = await addDoc(collection(db, "albums"), {
         name: data.name,
       })
-      console.log(docRef);
     dispatch({type:"ADD",data:{id:docRef.id,name:data.name}})
   };
 
@@ -50,12 +49,12 @@ const AlbumsList = () => {
     <>
     <NavBar/>
     {
-        selectedAlbum && (<ImagesList selectedAlbum={selectedAlbum}/>)
+        selectedAlbum && (<ImagesList selectedAlbum={selectedAlbum} setselectedAlbum={setselectedAlbum}/>)
     }
      {
         !selectedAlbum && (
             <div className={AlbumListCss.mainContainer}>
-        {showForm ? <AlbumForm addAlbum={addAlbum} dispatch={dispatch}/> : ""}
+        {showForm ? <AlbumForm addAlbum={addAlbum} dispatch={dispatch} setShowFormFn={setShowFormFn} /> : ""}
         <div className={AlbumListCss.heading}>
           <h1>Your albums</h1>
           <button onClick={setShowFormFn} className={showForm?AlbumListCss.cancel: AlbumListCss.create}>
@@ -65,7 +64,7 @@ const AlbumsList = () => {
         <div className={AlbumListCss.listsContainer}>
           {albums.map((value, index) => {
             return (
-              <div key={index} className={AlbumListCss.listContainer} onClick={()=>setselectedAlbum(value.id)}>
+              <div key={index} className={AlbumListCss.listContainer} onClick={()=>setselectedAlbum(value)}>
                 <img className={AlbumListCss.img} src={albumImage} alt="album" />
                 <span className={AlbumListCss.detail}>{value.name}</span>
               </div>

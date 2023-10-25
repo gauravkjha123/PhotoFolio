@@ -1,0 +1,154 @@
+.mainContainer {
+  margin: auto;
+  display: flex;
+  max-width: 1024px;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.create {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  outline: none;
+  color: #07f;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: 700;
+  background-color: #e7f2ff;
+  border: 2px solid #07f;
+}
+.cancel {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  outline: none;
+  color: #ff1300;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-weight: 700;
+  background-color: rgba(255, 19, 0, 0.1);
+  border: 2px solid #ff1300;
+}
+.listsContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.listContainer {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 150px;
+  padding: 10px;
+  position: relative;
+  width: 49%;
+  margin-bottom: 30px;
+}
+
+.listContainer:hover .btn_container {
+  display: flex;
+}
+.img {
+  height: 80%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.back_btn {
+  width: 30px;
+}
+.back_btn_container {
+  align-items: center;
+  aspect-ratio: 1;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-right: 30px;
+  width: 50px;
+}
+.imageList_update {
+  border: none;
+  outline: none;
+  right: 0px;
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+.btn_container {
+  display: none;
+  width: 17%;
+  position: absolute;
+  justify-content: space-between;
+  right: -10px;
+  top: -20px;
+}
+.carousel {
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    gap: 30px;
+    inset: 0;
+    justify-content: center;
+    position: fixed;
+    z-index: 999;
+}
+.carousel>button{
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 800;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    width: 60px;
+}
+.carousel >img {
+    height: 80%;
+    object-fit: cover;
+    width: 60vw;
+    overflow-clip-margin: content-box;
+    overflow:hidden
+}
+.close_carousel_btn{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+.imageList_delete {
+  border: none;
+  outline: none;
+  right: 0px;
+  height: 40px;
+  width: 40px;
+  top: -10px;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.detail {
+  color: black;
+  height: 10%;
+  width: 100%;
+  font-size: 1.1rem;
+  text-align: center;
+}
